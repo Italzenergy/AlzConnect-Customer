@@ -1,0 +1,197 @@
+/* Reset básico */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor general */
+.login-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+/* Carrusel panel */
+.login-carousel-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #27fb20, #04fa00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide-container.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-image {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: linear-gradient(135deg, #27fb20, #04fa00);
+  transform: scale(1.2);
+}
+.Panel-Login{flex: 1;
+  background: linear-gradient(135deg, #27fb20, #04fa00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+
+}
+/* Panel de formulario */
+.login-form-panel {
+ flex: 1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px;
+  border-radius: 12px;
+}
+
+.login-form-box {
+  width: 100%;
+}
+
+.login-logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px; 
+  
+}
+
+.login-logo {
+  width: 180px;
+  height: auto; 
+  max-height: 150px; 
+  object-fit: contain; 
+}
+
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: lighter;
+  color: #086c0b;
+  margin-top: 10px; 
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #086c0b;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.login-button {
+  background: linear-gradient(135deg, #27fb20, #04fa00);
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  color: #086c0b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background: #1bbb1b;
+  color: white;
+}
+
+.login-error {
+  color: #f44336;
+  text-align: center;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+  
+  }
+  
+  .login-carousel-panel, .login-form-panel {
+    flex: none;
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .login-carousel-panel {
+    height: 40vh;
+    
+  }
+  
+  .login-form-panel {
+    height: 60vh;
+  }
+}
