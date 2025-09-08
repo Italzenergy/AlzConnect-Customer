@@ -1,6 +1,7 @@
 // src/pages/Dashboard.jsx
 import React, { useEffect, useState } from "react";
 import api from "../api/client";
+import { useNavigate } from "react-router-dom";
 import "../styles/Dashboard.css";
 
 export default function Dashboard() {
@@ -53,10 +54,10 @@ export default function Dashboard() {
       day: "numeric",
     });
   };
-
+const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.clear();
-    window.location.href = "/login";
+    navigate("/login"); 
   };
 
   // === Carga de datos ===
