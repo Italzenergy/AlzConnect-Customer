@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
-import logo from "../assets/ALZ2.JPG";
+import logo from "../assets/ALZ2.jpg";
 
 // Importa tus imágenes para el carrusel
 import image1 from "../assets/carousel/image1.jpg";
