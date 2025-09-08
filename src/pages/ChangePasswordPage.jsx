@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/ChangePasswordPage.css";
+import { useNavigate } from "react-router-dom";
 export default function ChangePasswordPage() {
 const [password, setPassword] = useState("");
 const [confirmPassword, setConfirmPassword] = useState("");
 const tempUserId = localStorage.getItem("tempUserId");
-
+ const navigate = useNavigate();
 const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -22,7 +23,7 @@ const handleSubmit = async (e) => {
 
     alert("Contraseña cambiada con éxito. Ahora puedes ingresar.");
     localStorage.removeItem("tempUserId");
-    window.location.href = "/login";
+    navigate("/login"); 
   } catch (error) {
     console.error("Error al cambiar la contraseña:", error);
     alert("Hubo un error al cambiar la contraseña");
