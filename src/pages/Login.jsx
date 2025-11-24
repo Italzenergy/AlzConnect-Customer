@@ -17,7 +17,7 @@ export default function Login() {
   const [animationType, setAnimationType] = useState("fade"); // Tipo de animación por defecto
   const navigate = useNavigate();
 
-  // Datos del carrusel - imágenes y sus enlaces
+  // Datos del carrusel 
   const carouselData = [
     {
       image: image1,
