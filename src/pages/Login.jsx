@@ -28,11 +28,6 @@ export default function Login() {
       image: image2,
       link: "/novedades",
       isExternal: false
-    },
-    {
-      image: image3,
-      link: "/servicios",
-      isExternal: false
     }
   ];
 
